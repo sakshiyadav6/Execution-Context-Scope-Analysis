@@ -1,0 +1,518 @@
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+  font-family: "Inter", sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      #eef2ff 0,
+      transparent 35%
+    ),
+    #f8fafc;
+
+  color: #0f172a;
+
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   MAIN APP
+========================================= */
+
+.app {
+  width: min(100% - 32px, 900px);
+
+  margin: 0 auto;
+
+  padding: 60px 0;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 32px;
+}
+
+
+.eyebrow {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #6366f1;
+}
+
+
+.header h1 {
+  margin-top: 8px;
+
+  font-size: 38px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+}
+
+
+.header p {
+  margin-top: 10px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+.header-icon {
+  width: 64px;
+  height: 64px;
+
+  display: grid;
+  place-items: center;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  font-size: 28px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+.stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 16px;
+
+  padding: 20px;
+
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+
+  color: #4f46e5;
+
+  font-weight: 700;
+}
+
+
+.completed-icon {
+  background: #ecfdf5;
+
+  color: #059669;
+}
+
+
+.progress-icon {
+  background: #fff7ed;
+
+  color: #ea580c;
+}
+
+
+.stat-label {
+  display: block;
+
+  font-size: 12px;
+
+  color: #64748b;
+
+  margin-bottom: 4px;
+}
+
+
+.stat-card strong {
+  font-size: 24px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  background: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 20px;
+
+  padding: 26px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+
+.section-heading h2 {
+  font-size: 18px;
+
+  letter-spacing: -0.3px;
+}
+
+
+.section-heading p {
+  color: #64748b;
+
+  font-size: 13px;
+
+  margin-top: 5px;
+}
+
+
+/* =========================================
+   ADD TOPIC
+========================================= */
+
+.add-topic {
+  display: flex;
+
+  gap: 12px;
+}
+
+
+.add-topic input {
+  flex: 1;
+
+  height: 48px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 12px;
+
+  padding: 0 15px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+
+.add-topic input:focus {
+  border-color: #6366f1;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+.add-topic button {
+  height: 48px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 0 20px;
+
+  background: #4f46e5;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.add-topic button:hover {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+}
+
+
+.add-topic button span {
+  font-size: 18px;
+
+  margin-right: 4px;
+}
+
+
+/* =========================================
+   TOPIC LIST
+========================================= */
+
+.topic-list {
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.topic-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  transition: 0.2s;
+}
+
+
+.topic-item:hover {
+  border-color: #c7d2fe;
+
+  background: #fafaff;
+}
+
+
+.topic-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  min-width: 0;
+}
+
+
+.topic-check {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #f1f5f9;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  flex-shrink: 0;
+}
+
+
+.topic-name {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #1e293b;
+
+  word-break: break-word;
+}
+
+
+.topic-name.completed {
+  text-decoration: line-through;
+
+  color: #94a3b8;
+}
+
+
+.delete-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  cursor: pointer;
+
+  padding: 8px;
+
+  border-radius: 8px;
+
+  transition: 0.2s;
+}
+
+
+.delete-btn:hover {
+  background: #fef2f2;
+
+  color: #ef4444;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+  text-align: center;
+
+  padding: 40px 20px;
+
+  color: #64748b;
+}
+
+
+.empty-icon {
+  font-size: 32px;
+
+  margin-bottom: 12px;
+}
+
+
+.empty-state h3 {
+  color: #334155;
+
+  font-size: 15px;
+
+  margin-bottom: 6px;
+}
+
+
+.empty-state p {
+  font-size: 13px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: 12px;
+
+  padding: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .app {
+    padding: 30px 0;
+  }
+
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+
+  .add-topic {
+    flex-direction: column;
+  }
+
+
+  .add-topic button {
+    width: 100%;
+  }
+
+
+  .card {
+    padding: 20px;
+  }
+
+}
