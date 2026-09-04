@@ -188,8 +188,10 @@ function renderStats() {
 
   const stats = document.getElementById("stats");
 
-  stats.textContent =
-    `Total Topics: ${total} | Completed: ${completed}`;
+  document.getElementById("totalTopics").textContent = total;
+  document.getElementById("completedTopics").textContent = completed;
+  document.getElementById("progress").textContent =
+    `${total === 0 ? 0 : Math.round((completed / total) * 100)}%`;
 }
 
 
@@ -278,4 +280,3 @@ const sayHello = () => {
 Cannot access 'sayHello' before initialization
 
 */
-
