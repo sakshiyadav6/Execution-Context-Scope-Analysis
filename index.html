@@ -1,0 +1,189 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Study Tracker</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+      <div>
+        <span class="eyebrow">MY LEARNING</span>
+
+        <h1>Study Tracker</h1>
+
+        <p>
+          Track your learning progress and stay consistent.
+        </p>
+      </div>
+
+      <div class="header-icon">
+        📚
+      </div>
+
+    </header>
+
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+      <div class="stat-card">
+
+        <div class="stat-icon">
+          📖
+        </div>
+
+        <div>
+          <span class="stat-label">Total Topics</span>
+          <strong id="totalTopics">0</strong>
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-icon completed-icon">
+          ✓
+        </div>
+
+        <div>
+          <span class="stat-label">Completed</span>
+          <strong id="completedTopics">0</strong>
+        </div>
+
+      </div>
+
+
+      <div class="stat-card">
+
+        <div class="stat-icon progress-icon">
+          %
+        </div>
+
+        <div>
+          <span class="stat-label">Progress</span>
+          <strong id="progress">0%</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ADD TOPIC ================= -->
+
+    <section class="card">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Add a new topic</h2>
+
+          <p>
+            What do you want to learn today?
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="add-topic">
+
+        <input
+          id="topicInput"
+          type="text"
+          placeholder="e.g. JavaScript Functions"
+        >
+
+        <button id="addBtn">
+          <span>+</span>
+          Add Topic
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= TOPICS ================= -->
+
+    <section class="card">
+
+      <div class="section-heading">
+
+        <div>
+          <h2>Your Topics</h2>
+
+          <p>
+            Click a topic to mark it as completed.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- Topics will be added by JavaScript -->
+
+      <ul id="topicList" class="topic-list"></ul>
+
+
+      <!-- Empty State -->
+
+      <div id="emptyState" class="empty-state">
+
+        <div class="empty-icon">
+          📝
+        </div>
+
+        <h3>No topics yet</h3>
+
+        <p>
+          Add your first topic and start learning.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      Built while learning JavaScript 🚀
+    </footer>
+
+  </main>
+
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+
+</body>
+
+</html>
+```
